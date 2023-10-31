@@ -7,6 +7,7 @@
 	const VIOLETCITY_FRUIT_TREE
 	const VIOLETCITY_POKE_BALL1
 	const VIOLETCITY_POKE_BALL2
+    const VIOLETCITY_GYM_BLOCKER
 
 VioletCity_MapScripts:
 	def_scene_scripts
@@ -17,6 +18,21 @@ VioletCity_MapScripts:
 VioletCityFlypointCallback:
 	setflag ENGINE_FLYPOINT_VIOLET
 	endcallback
+
+VioleCityGymBlockerScript: 
+    faceplayer
+	checkevent EVENT_BEAT_WHITNEY
+	opentext
+	iffalse .Block
+	disappear VIOLETCITY_GYM_BLOCKER
+	end
+	
+.Block	
+	writetext Text_VioletcityGymblocker_Beat_LI_Text
+	waitbutton
+	closetext
+	end
+
 
 VioletCityEarlScript:
 	applymovement VIOLETCITY_EARL, VioletCitySpinningEarl_MovementData
@@ -177,6 +193,14 @@ VioletCitySpinningEarl_MovementData:
 	turn_head DOWN
 	step_end
 
+Text_VioletcityGymblocker_Beat_LI_Text:
+    text "Falkner is out"
+	line "Training"
+
+	para "Come back later"
+	line "Until he returns"
+	done
+
 Text_EarlAsksIfYouBeatFalkner:
 	text "Hello!"
 	line "You are trainer?"
@@ -310,3 +334,4 @@ VioletCity_MapEvents:
 	object_event 14, 29, SPRITE_FRUIT_TREE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioletCityFruitTree, -1
 	object_event  4,  1, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VioletCityPPUp, EVENT_VIOLET_CITY_PP_UP
 	object_event 35,  5, SPRITE_POKE_BALL, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_ITEMBALL, 0, VioletCityRareCandy, EVENT_VIOLET_CITY_RARE_CANDY
+    object_event 18, 18, SPRITE_YOUNGSTER,  SPRITEMOVEDATA_STANDING_DOWN, 1, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, VioleCityGymBlockerScript,  -1

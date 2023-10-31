@@ -135,7 +135,7 @@ BattleAnimations::
 	dw BattleAnim_SpikeCannon
 	dw BattleAnim_Constrict
 	dw BattleAnim_Amnesia
-	dw BattleAnim_Kinesis
+	dw BattleAnim_AirSlash
 	dw BattleAnim_Softboiled
 	dw BattleAnim_HiJumpKick
 	dw BattleAnim_Glare
@@ -182,7 +182,7 @@ BattleAnimations::
 	dw BattleAnim_CottonSpore
 	dw BattleAnim_Reversal
 	dw BattleAnim_Spite
-	dw BattleAnim_PowderSnow
+	dw BattleAnim_IceShard
 	dw BattleAnim_Protect
 	dw BattleAnim_MachPunch
 	dw BattleAnim_ScaryFace
@@ -2226,7 +2226,7 @@ BattleAnim_FlareBlitz:
 	anim_wait 96
 	anim_bgeffect BATTLE_BG_EFFECT_TACKLE, $0, $1, $0
 	anim_wait 4
-	anim_bgeffect ANIM_BG_FLASH_INVERTED, $0, $8, $12
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $8, $12
 	anim_sound 0, 1, SFX_EMBER
 	anim_obj BATTLE_ANIM_OBJ_FIRE_BLAST, -15, 0,   6, 0, $1
 	anim_obj BATTLE_ANIM_OBJ_FIRE_BLAST, -15, 0,   6, 0, $4
@@ -2493,19 +2493,29 @@ BattleAnim_SkullBash:
 	anim_call BattleAnim_ShowMon_0
 	anim_ret
 
-BattleAnim_Kinesis:
-	anim_2gfx BATTLE_ANIM_GFX_MISC, BATTLE_ANIM_GFX_NOISE
-	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $2, $0
-	anim_obj BATTLE_ANIM_OBJ_KINESIS, 80, 76, $0
-	anim_wait 32
+BattleAnim_AirSlash:
+	anim_if_param_equal $1, BattleAnim_FocusEnergy
+	anim_1gfx BATTLE_ANIM_GFX_WHIP
+	anim_bgeffect BATTLE_BG_EFFECT_CYCLE_OBPALS_GRAY_AND_YELLOW, $0, $1, $0
 .loop
-	anim_sound 0, 0, SFX_KINESIS
-	anim_obj BATTLE_ANIM_OBJ_SOUND, 64, 88, $0
-	anim_wait 32
+	anim_bgeffect BATTLE_BG_EFFECT_FLASH_INVERTED, $0, $4, $2
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_RAZOR_WIND2, 152, 40, $3
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_RAZOR_WIND2, 136, 56, $3
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_RAZOR_WIND2, 152, 64, $3
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_RAZOR_WIND1, 120, 40, $83
+	anim_wait 4
+	anim_sound 0, 1, SFX_RAZOR_WIND
+	anim_obj BATTLE_ANIM_OBJ_RAZOR_WIND1, 120, 64, $83
+	anim_wait 4
 	anim_loop 3, .loop
-	anim_wait 32
-	anim_sound 0, 0, SFX_KINESIS_2
-	anim_wait 32
+	anim_wait 24
 	anim_ret
 
 BattleAnim_Peck:
@@ -3397,20 +3407,20 @@ BattleAnim_Spite:
 	anim_wait 96
 	anim_ret
 
-BattleAnim_PowderSnow:
+BattleAnim_IceShard:
 	anim_1gfx BATTLE_ANIM_GFX_ICE
 .loop
 	anim_sound 6, 2, SFX_SHINE
-	anim_obj BATTLE_ANIM_OBJ_POWDER_SNOW, 64, 88, $23
+	anim_obj BATTLE_ANIM_OBJ_POWDER_SNOW,   8, 0,  11, 0, $23
 	anim_wait 2
 	anim_sound 6, 2, SFX_SHINE
-	anim_obj BATTLE_ANIM_OBJ_POWDER_SNOW, 64, 80, $24
+	anim_obj BATTLE_ANIM_OBJ_POWDER_SNOW,   8, 0,  10, 0, $24
 	anim_wait 2
 	anim_sound 6, 2, SFX_SHINE
-	anim_obj BATTLE_ANIM_OBJ_POWDER_SNOW, 64, 96, $23
+	anim_obj BATTLE_ANIM_OBJ_POWDER_SNOW,   8, 0,  12, 0, $23
 	anim_wait 2
 	anim_loop 2, .loop
-	anim_bgeffect BATTLE_BG_EFFECT_WHITE_HUES, $0, $8, $0
+	anim_bgeffect  BATTLE_BG_EFFECT_WHITE_HUES, $0, $8, $0
 	anim_wait 40
 	anim_call BattleAnimSub_Ice
 	anim_wait 32

@@ -139,7 +139,7 @@
 	const SPIKE_CANNON ; 83
 	const CONSTRICT    ; 84
 	const AMNESIA      ; 85
-	const KINESIS      ; 86
+	const AIR_SLASH    ; 86
 	const SOFTBOILED   ; 87
 	const HI_JUMP_KICK ; 88
 	const GLARE        ; 89
@@ -186,7 +186,7 @@
 	const COTTON_SPORE ; b2
 	const REVERSAL     ; b3
 	const SPITE        ; b4
-	const POWDER_SNOW  ; b5
+	const ICE_SHARD    ; b5
 	const PROTECT      ; b6
 	const MACH_PUNCH   ; b7
 	const SCARY_FACE   ; b8

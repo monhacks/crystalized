@@ -134,7 +134,7 @@ MoveDescriptions::
 	dw SpikeCannonDescription
 	dw ConstrictDescription
 	dw AmnesiaDescription
-	dw KinesisDescription
+	dw AirSlashDescription
 	dw SoftboiledDescription
 	dw HiJumpKickDescription
 	dw GlareDescription
@@ -181,7 +181,7 @@ MoveDescriptions::
 	dw CottonSporeDescription
 	dw ReversalDescription
 	dw SpiteDescription
-	dw PowderSnowDescription
+	dw IceShardDescription
 	dw ProtectDescription
 	dw MachPunchDescription
 	dw ScaryFaceDescription
@@ -799,9 +799,9 @@ AmnesiaDescription:
 	db   "Sharply raises the"
 	next "user's SPCL.DEF.@"
 
-KinesisDescription:
-	db   "Reduces the foe's"
-	next "accuracy.@"
+AirSlashDescription:
+	db   "May Flinch"
+	next "the target.@"
 
 SoftboiledDescription:
 	db   "Restores HP by 1/2"
@@ -987,9 +987,9 @@ SpiteDescription:
 	db   "Cuts the PP of the"
 	next "foe's last move.@"
 
-PowderSnowDescription:
-	db   "An attack that may"
-	next "cause freezing.@"
+IceShardDescription:
+	db   "Piority"
+	next "ice move.@"
 
 ProtectDescription:
 	db   "Foils attack that"
