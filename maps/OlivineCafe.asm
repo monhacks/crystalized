@@ -29,6 +29,15 @@ OlivineCafeFishingGuruScript:
 OlivineCafeSailorScript:
 	jumptextfaceplayer OlivineCafeSailorText
 
+MoveRelearnerScript:
+	faceplayer
+	opentext
+	special MoveRelearner
+	waitbutton
+	closetext
+	end
+
+
 OlivineCafeStrengthSailorText:
 	text "Hah! Your #MON"
 	line "sure look like"
@@ -91,3 +100,4 @@ OlivineCafe_MapEvents:
 	object_event  4,  3, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeStrengthSailorScript, -1
 	object_event  7,  3, SPRITE_FISHING_GURU, SPRITEMOVEDATA_WALK_UP_DOWN, 0, 1, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeFishingGuruScript, -1
 	object_event  6,  6, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, OlivineCafeSailorScript, -1
+	object_event  1,  2, SPRITE_GRANNY, SPRITEMOVEDATA_STANDING_RIGHT, 2, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, MoveRelearnerScript, -1

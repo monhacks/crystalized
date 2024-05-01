@@ -1290,15 +1290,15 @@ RareCandyEffect:
 	ld b, PARTYMENUACTION_HEALING_ITEM
 	call UseItem_SelectMon
 
-	jp c, RareCandy_StatBooster_ExitMenu
-
 	call RareCandy_StatBooster_GetParameters
 
 	ld a, MON_LEVEL
 	call GetPartyParamLocation
 
+	ld a, [wLevelCap]
+	ld b, a
 	ld a, [hl]
-	cp MAX_LEVEL
+	cp b
 	jp nc, NoEffectMessage
 
 	inc a
@@ -1373,8 +1373,6 @@ RareCandyEffect:
 	xor a
 	ld [wForceEvolution], a
 	farcall EvolvePokemon
-
-	jp UseDisposableItem
 
 HealPowderEffect:
 	ld b, PARTYMENUACTION_HEALING_ITEM
