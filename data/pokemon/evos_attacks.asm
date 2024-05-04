@@ -2595,6 +2595,7 @@ SunkernEvosAttacks:
 	db 19, SUNNY_DAY
 	db 31, SYNTHESIS
 	db 46, GIGA_DRAIN
+	db 50, FIRE_BLAST
 	db 0 ; no more level-up moves
 
 SunfloraEvosAttacks:
