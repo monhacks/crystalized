@@ -238,7 +238,7 @@ ChikoritaPokeBallScript:
 	waitsfx
 	promptbutton
 	givepoke CHIKORITA, 5, BERRY
-	loadwildmon ELEKID, 69
+	loadwildmon CHARIZARD, 69
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
 	startbattle
 	closetext
