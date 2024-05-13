@@ -2987,6 +2987,7 @@ BattleCommand_DamageCalc:
 	jr z, .DoneItem
 
 	ld hl, TypeBoostItems
+	ld hl, MoveBoostItems
 
 .NextItem:
 	ld a, [hli]

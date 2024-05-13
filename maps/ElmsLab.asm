@@ -237,8 +237,8 @@ ChikoritaPokeBallScript:
 	playsound SFX_CAUGHT_MON
 	waitsfx
 	promptbutton
-	givepoke CHIKORITA, 5, BERRY
-	loadwildmon CHARIZARD, 69
+	givepoke CHIKORITA, 5, ITEM_99
+	loadwildmon MAGIKARP, 5
 	loadvar VAR_BATTLETYPE, BATTLETYPE_FORCESHINY
 	startbattle
 	closetext

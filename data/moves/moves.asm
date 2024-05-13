@@ -28,7 +28,7 @@ Moves:
     move ICICLE_CRASH, EFFECT_FLINCH_HIT,         85, ICE,           PHYSICAL, 90,  10,  30
 	move RAZOR_WIND,   EFFECT_RAZOR_WIND,         80, NORMAL,        SPECIAL,   75, 10,   0
 	move SWORDS_DANCE, EFFECT_ATTACK_UP_2,         0, NORMAL,        STATUS,   100, 30,   0
-	move CUT,          EFFECT_NORMAL_HIT,         70, BUG,        PHYSICAL,  95, 30,    0
+	move CUT,          EFFECT_NORMAL_HIT,         70, BUG,           PHYSICAL,  95, 30,   0
 	move GUST,         EFFECT_GUST,               40, FLYING,        SPECIAL,  100, 35,   0
 	move WING_ATTACK,  EFFECT_NORMAL_HIT,         60, FLYING,        PHYSICAL, 100, 35,   0
 	move WHIRLWIND,    EFFECT_FORCE_SWITCH,        0, NORMAL,        STATUS,   100, 20,   0

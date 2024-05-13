@@ -116,6 +116,7 @@ INCLUDE "engine/battle/read_trainer_dvs.asm"
 INCLUDE "engine/battle/returntobattle_useball.asm"
 INCLUDE "engine/battle/consume_held_item.asm"
 INCLUDE "data/moves/effects.asm"
+INCLUDE "data/moves/move_boost_items.asm"
 INCLUDE "engine/events/kurt_selectquantity_interpretjoypad.asm"
 
 

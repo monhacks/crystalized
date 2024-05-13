@@ -231,7 +231,6 @@ Porygon2Frontpic:    INCBIN "gfx/pokemon/porygon2/front.animated.2bpp.lz"
 SandshrewFrontpic:   INCBIN "gfx/pokemon/sandshrew/front.animated.2bpp.lz"
 NidoranFFrontpic:    INCBIN "gfx/pokemon/nidoran_f/front.animated.2bpp.lz"
 PidgeyFrontpic:      INCBIN "gfx/pokemon/pidgey/front.animated.2bpp.lz"
-ParasectBackpic:     INCBIN "gfx/pokemon/parasect/back.2bpp.lz"
 
 
 SECTION "Pics 10", ROMX
@@ -268,7 +267,6 @@ AlakazamBackpic:     INCBIN "gfx/pokemon/alakazam/back.2bpp.lz"
 AipomFrontpic:       INCBIN "gfx/pokemon/aipom/front.animated.2bpp.lz"
 AbraFrontpic:        INCBIN "gfx/pokemon/abra/front.animated.2bpp.lz"
 HitmontopBackpic:    INCBIN "gfx/pokemon/hitmontop/back.2bpp.lz"
-CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 
 
 SECTION "Pics 11", ROMX
@@ -779,8 +777,10 @@ HoothootFrontpic:    INCBIN "gfx/pokemon/hoothoot/front.animated.2bpp.lz"
 UnownEFrontpic:      INCBIN "gfx/pokemon/unown_e/front.animated.2bpp.lz"
 MagnemiteBackpic:    INCBIN "gfx/pokemon/magnemite/back.2bpp.lz"
 PinsirFrontpic:      INCBIN "gfx/pokemon/pinsir/front.animated.2bpp.lz"
+ParasectBackpic:     INCBIN "gfx/pokemon/parasect/back.2bpp.lz"
 
 SECTION "Pics 21", ROMX
+CloysterBackpic:     INCBIN "gfx/pokemon/cloyster/back.2bpp.lz"
 
 SECTION "Pics 22", ROMX
 
