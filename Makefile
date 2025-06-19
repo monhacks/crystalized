@@ -42,7 +42,12 @@ else
 SHA1 := sha1sum
 endif
 
-RGBDS ?=
+ifneq ($(wildcard rgbds/.*),)
+RGBDS := rgbds/
+else
+RGBDS :=
+endif
+
 RGBASM  ?= $(RGBDS)rgbasm
 RGBFIX  ?= $(RGBDS)rgbfix
 RGBGFX  ?= $(RGBDS)rgbgfx
